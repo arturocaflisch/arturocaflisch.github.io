@@ -63,7 +63,7 @@ elementi.forEach(el => {
 // Function for showing the message box of email copying
 function showToastMessage() {
     const toast = document.createElement('div');
-    toast.textContent = "Email copied to clipboard!";
+    toast.textContent = "Content copied to clipboard!";
     toast.className = "mail-toast";
     document.body.appendChild(toast);
     setTimeout(() => {
@@ -89,3 +89,21 @@ function onMailBtnClick(event) {
 const copyMailBtn = document.querySelector('#copyMailBtn'); 
 copyMailBtn.addEventListener('click', onMailBtnClick); 
 
+// Functions for phone button in footer
+function onPhoneBtnClick(event) {
+    const phoneBtn = event.currentTarget;
+    const phone = phoneBtn.getAttribute('data-phone');
+    console.log(phone);
+    navigator.clipboard.writeText(phone);
+    // visual effect for copying the phone number
+    const icon = document.querySelector('#copyPhoneBtn i');
+    icon.classList.remove('fa-phone');
+    icon.classList.add('fa-check');
+    setTimeout(() => {
+        icon.classList.remove('fa-check');
+        icon.classList.add('fa-phone');
+    }, 500);
+    showToastMessage();
+}
+const copyPhoneBtn = document.querySelector('#copyPhoneBtn');
+copyPhoneBtn.addEventListener('click', onPhoneBtnClick);

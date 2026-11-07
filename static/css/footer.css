@@ -41,7 +41,7 @@ footer {
     100% { opacity: 0; transform: translate(-50%, -20px); }
 }
 
-/* Social Section */
+/* Section */
 .social-section {
     padding: 2rem 0 1rem 0;
     border-top: 2px solid rgba(var(--hover-link-rgb), 0.2);
