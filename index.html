@@ -97,7 +97,7 @@ custom_js: index.js
             <div class="col my-4">
                 <h2 class="section-title">Music style</h2>
                 <p>
-                    The stylistic signature of his current and recent projects is based on the balance between power and sound research: intense and full bodied voices, six string basses, acoustic and electronic percussions, pianos and synths interweave with the distinct sound of his eight strings electric and twelve strings acoustic guitars.
+                    The stylistic signature of his <a href="{{ '/lineups.html#solo-members' }}">current</a> and <a href="{{ '/lineups.html#metiria-members' }}">recent</a> projects is based on the balance between power and sound research: intense and full bodied voices, six string basses, acoustic and electronic percussions, pianos and synths interweave with the distinct sound of his eight strings electric and twelve strings acoustic guitars.
                     Extreme genres' complex rhythms dialogue with wide melodies and harmonies ranging from classical counterpoint to contemporary modal music.
                     His multifaceted identity is the unavoidable result of the different musical backgrounds and styles he has encounteres during his career, encompassing: funk, rock, ambient, pop, progressive-symphonic metal and modern jazz.
                 </p>
@@ -133,11 +133,62 @@ custom_js: index.js
 
         <!-- Beginning with local projects -->
         <div class="row align-items-center mb-5">
+
+            <!-- Text Column -->
+            <div class="col-12 col-lg-6 mb-4 mb-lg-0 pe-lg-5">
+                <p class="text-lg-start">
+                    Everything starts in the place Arturo's friends like to call “The office”, a simple but essential space, that was built by Arturo' continuous and passionate investment of all of his time and resources during his university years.
+                    This hideaway is the center of his creative life since the biginning of his carreer and gathers all af the leading-edge instruments and equipments of a fully functional rehearsal and recording room hosting late-night jam sessions, technological experimentations, luthiery setups and the writing session that shaped all of Arturo's bands identities from Gli Ufficio to Asphyxia, from Etnapop 2.0 to Metiria and ...
+                </p>
+            </div>
+
+            <!-- Auto-scrolling images column -->
+            <div class="col-12 col-lg-6">
+                <div class="photo-switch-container">
+                    <div id="localProjectCarousel" class="carousel slide carousel-fade w-100 h-100" data-bs-ride="carousel" data-bs-interval="4000" data-bs-pause="false">
+                        <div class="carousel-inner w-100 h-100">
+                    
+                        {% assign target_folder = "/files/events_pictures/sanremo-national-finals/" %}
+                        {% assign is_first = true %}
+                    
+                            {% for file in site.static_files %}
+                                {% if file.path contains target_folder %}
+                                    {% assign ext = file.extname | downcase %}
+                                    {% if ext == '.jpg' or ext == '.jpeg' or ext == '.png' %}
+                                
+                                        <div class="carousel-item w-100 h-100 {% if is_first %}active{% endif %}">
+                                            <img src="{{ file.path | relative_url }}" class="switch-img" alt="Metiria local project">
+                                        </div>
+                                        {% assign is_first = false %}
+
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <!-- Dawn of national and international success -->
+
+        <!-- Title -->
+        <div class="row mt-5 mb-4">
+            <div class="col-12">
+                <h2 class="section-title text-center">Dawn of national and international success</h2>
+            </div>
+        </div>
+
+        <!-- Dawn of national and international success -->
+        <div class="row align-items-center mb-5">
     
             <!-- Text Column -->
             <div class="col-12 col-lg-6 mb-4 mb-lg-0 pe-lg-5">
                 <p class="text-lg-start">
-                “The office” as they like to call it, is a simple but essential space built with consistency and passion by musicians, hosting frequent late-night jam sessions, technological experimentations and long-lasting hours of musical exchanges shaping the group's identity up to present days.    
+                    The turning point comes with Metiria's participation to the Sanremo Rock contest 2025. After being selected for the <a href="{{ '/tour.html#sanremo-interregional' | relative_url }}">interregional round</a>, the band's song <a href="{{ '/releases.html#sorrow' | relative_url }}">Sorrow</a> reaches the <a href="{{ '/tour.html#sanremo-national-finals' | relative_url }}">national grand final</a> (taking place in the world-famous “Teatro Ariston”) and <a href="{{ site.baseurl }}{% post_url news/2025-09-15-sanremo-rock-metiria %}">wins the third overall place</a> of the renowned original music competition. 
+                    This result arouses new interest and medial resonance for the Sicilian formation, which is notified of the possibility to take part to the San Marino Song Contest.
+                    Between more than 800 international bands who applied for the three-steps <a href="{{ '/tour.html#dreaming-san-marino-casting' | relative_url }}">Castings</a>, Metiria's new song <a href="{{ '/releases.html#attention-seeker' | relative_url }}">Attention seeker</a> makes the top being selected for the <a href="{{ '/tour.html#san-marino-semifinals' | relative_url }}">semifinals</a> and becoming <a href="{{ site.baseurl }}{% post_url news/2026-02-20-ariston-metiria %}">part of the 40 </a> artists running for Eurovision Song Contest 2026.
                 </p>
             </div>
     
@@ -168,39 +219,15 @@ custom_js: index.js
                     </div>
                 </div>
             </div>
-
         </div>
-
-        <!-- Dawn of national and international success -->
-        <div class="row align-items-center">
-            <div class="col my-4">
-                <h2 class="section-title">Dawn of national and international success</h2>
-                <p> 
-                    Metiria takes its form and entirety in 2024 in Catania with its debut in the setting of the <a href="{{ '/tour.html#disummer-2024' | relative_url }}">Benedictine Monastery</a>, but its birth dates back to the first writing sessions held right away in Arturo's small studio.
-                    At the beginning of the band's career, only a few stages had been tread: some <a href="{{ '/tour.html#local-contests-2024' | relative_url }}">local contests</a> and <a href="{{ '/tour.html#rock-festivals-2025' | relative_url }}">festivals</a>, a few live performances in small theaters, and other minor gigs often providing the band with just expense reimbursements.
-                    Despite this, the band's vision was already clear and, in on year's time, the first national shows in Basilicata and Calabria have been already put on.
-                </p>
-
-                <p>
-                    The turning point came with the band's participation to the Sanremo Rock contest. After being selected for the regional phase at first, and for the <a href="{{ '/tour.html#sanremo-interregional' | relative_url }}">interregional round</a> subsequently, Metiria's song <a href="{{ '/releases.html#sorrow' | relative_url }}">Sorrow</a> reached the <a href="{{ '/tour.html#sanremo-national-finals' | relative_url }}">national grand final</a> which took place in the world-famous “Teatro Ariston” <a href="{{ site.baseurl }}{% post_url news/2025-09-15-sanremo-rock-metiria %}">winning the third overall place</a> of the renowned original music competition. 
-                    This result marks the second era of the project arousing new interest and medial resonance for the Sicilian formation.  
-                    Thanks to this experience the band is notified of the possibility to take part to the San Marino Song Contest. 
-                    Metiria decides once again, under the wise guidance of guitarist-composer Arturo Caflisch and singer-lyricist Aurora Amas, to catch this opportunity without any hesitation.
-                    Between more than 800 bands who applied for the <a href="{{ '/tour.html#dreaming-san-marino-casting' | relative_url }}">Castings</a>, the band is included in the list of the first 240 gaining the access to the <a href="{{ '/tour.html#dreaming-san-marino-stage' | relative_url }}">Stage & Live Academy</a>, competing with its new song <a href="{{ '/releases.html#attention-seeker' | relative_url }}">Attention seeker</a> with numerous national and international artists.
-                    The group made the top being selected for the <a href="{{ '/tour.html#san-marino-semifinals' | relative_url }}">first semifinal</a>, being <a href="{{ site.baseurl }}{% post_url news/2026-02-20-ariston-metiria %}">part of the first 20 </a>of the total of 40 artists running for a place in the grand final.
-                </p>
-            </div>
-        </div>
-
-        <!-- Metiria's photos -->
 
         <!-- A door closes, another one opens -->
         <div class="row align-items-center">
             <div class="col my-4">
                 <h2 class="section-title">A door closes, another one opens</h2>
                 <p>
-                    Due to differences of opinion on the principles of meritocracy that were supposed to govern the band's progress, after three years of total commitment, sharing his rehearsal and recording room, his live instrumentation, some near-definite arrangements and drafts for many of the mostly awarded songs and transportation means for national and international dates, Arturo Caflisch decides to leave the band he founded and carried up to September 2026.
-                    To avoid conflicts related to the registered trademark "Metiria", he still co-owns with the band's frontwoman, it was decided to release the band's first album still featuring him as author, as well as performer of all the guitar parts, but under the new band name of "..."
+                    Due to differences of opinion on the unequal commitment between the band's members after three years of incessant work by Arturo, he decides to leave the project he founded and carried.
+                    To avoid conflicts related to the registered trademark "Metiria", he still co-owns with the band's singer, it was decided to release the band's first album still featuring him as author, as well as performer of all the guitar parts, but under the new band name of "..."
                 </p>
             </div>
         </div>
