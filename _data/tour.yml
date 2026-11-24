@@ -98,7 +98,7 @@
       location: "Teatro Ariston"
       maps_url: "https://maps.app.goo.gl/AyCb4j5U4qgpktzX8"
       pictures: "sanremo-national-finals"
-      news: "sanremo-rock-2025"
+      news: "sanremo-national-finals"
 
     - id: "sanremo-interregional"
       date: "2 Aug 2025"
@@ -118,7 +118,7 @@
       location: "Cattedrale di San Nicolò"
       maps_url: "https://maps.app.goo.gl/hWr8bz5tbxLbmW4w8"
       pictures: "sanremo-rock-2025"
-      news: false
+      news: "sanremo-regional"
 
 - id: "rock-festivals-2025"
   title: "Rock Festivals 2025"
@@ -154,7 +154,7 @@
       location: "Auditorium R. Gervasio"
       maps_url: "https://maps.app.goo.gl/rzUYQ8MGdkSpc1Ww7"
       pictures: "/pictures.html"
-      news: false
+      news: "promuovi-la-tua-musica"
 
     - id: "disummer-2024"
       date: "28 Oct 2024"
